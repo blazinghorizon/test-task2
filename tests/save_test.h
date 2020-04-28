@@ -30,7 +30,8 @@ TEST(saveTest_negative, _empty_filename) {
     load(txt, filename);
     free(filename);
 
-    EXPECT_EQ(save(txt, filename), -1);
+    char* name = (char*) malloc(sizeof(char*));
+    EXPECT_EQ(save(txt, name), -1);
 }
 
 #endif // TEST_SAVE_H
