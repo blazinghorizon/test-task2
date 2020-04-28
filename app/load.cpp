@@ -6,6 +6,7 @@
  * This code is licensed under a MIT-style license.
  */
 
+#include <stdio.h>
 #include "load.h"
 #include "text/text.h"
 

@@ -37,7 +37,8 @@ int main()
         printf("ed > ");
 
         /* Получаем команду */
-        fgets(cmdline, MAXLINE, stdin);
+        if (fgets(cmdline, MAXLINE, stdin) == NULL)
+            continue;
 
         /* Извлекаем имя команды */
         if ((cmd = strtok(cmdline, " \n")) == NULL) {
