@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string.h>
 #include <math.h>
+#include <stdio.h>
 #include "text/text.h"
 #include "showtrimmedfromstart.h"
 #include "cp.h"
