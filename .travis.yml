@@ -4,19 +4,23 @@ language:
 before_install:
   - pip install --user cpp-coveralls
 
-addons:
-  sonarcloud:
-    organization: "blazinghorizon"
-
 script:
   - qmake
   - make
   - ./tests/tests
 
+
 after_success:
   - coveralls --root . -E ".*external.*" -E ".*tests.*"
   - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output
+
+git:
+  depth: false
+  
+addons:
+  sonarcloud:
+    organization: "blazinghorizon"
 
 cache:
   directories:
