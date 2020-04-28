@@ -25,9 +25,12 @@ void process_forward(text txt,
     int cursor_position = -1;
 
     /*Обработка*/
-    for (auto it = txt->lines.begin(); it != txt->lines.end(); it++) {
-	if (txt->cursor->line == it) cursor_position = txt->cursor->pos; else cursor_position = -1;
-	process(index, *it, cursor_position, data);
+    for (list <string> :: iterator it = txt->lines.begin(); it != txt->lines.end(); it++) {
+        if (txt->cursor->line == it)
+            cursor_position = txt->cursor->pos;
+        else
+            cursor_position = -1;
+        process(index, *it, cursor_position, data);
         index++;
     }
 }

@@ -16,7 +16,7 @@ int move_cursor(text txt, int str, int col)
         return -1;
     }
    /*Задание значений курсора*/
-   auto it = txt->lines.begin();
+   list <string> :: iterator it = txt->lines.begin();
 
    if (str >= 0 && txt->lines.size() >= (size_t)str) {
        advance(it, str);
