@@ -6,9 +6,10 @@
  * This code is licensed under a MIT-style license.
  */
 
+#include <assert.h>
+#include <stdio.h>
 #include "save.h"
 #include "text/text.h"
-#include <assert.h>
 
 static void save_line(int index, string contents, int cursor, void *data);
 

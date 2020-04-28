@@ -6,10 +6,12 @@
  * This code is licensed under a MIT-style license.
  */
 
-#include "rle.h"
-#include "text/text.h"
 #include <iostream>
 #include <assert.h>
+#include <stdio.h>
+#include "rle.h"
+#include "text/text.h"
+
 
 static void rle_line(int index, string contents, int cursor, void *data);
 
