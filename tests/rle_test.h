@@ -20,6 +20,8 @@ TEST(rleTest_positive, _default) {
     free(filename);
     move(txt, 0, 2);
     EXPECT_EQ(rle_str(txt), 1);
+
+    remove_all(txt);
 }
 
 TEST(rleTest_negative, _empty) {
@@ -27,6 +29,7 @@ TEST(rleTest_negative, _empty) {
 
     EXPECT_EQ(rle_str(txt), -1);
 
+    remove_all(txt);
 }
 
 TEST(rleTest_negative, _wrong_crsr_pos) {
@@ -40,5 +43,7 @@ TEST(rleTest_negative, _wrong_crsr_pos) {
 
     move(txt, 1, 15);
     EXPECT_EQ(rle_str(txt), 0);
+
+    remove_all(txt);
 }
 #endif // RLE_H

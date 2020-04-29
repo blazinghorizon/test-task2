@@ -3,6 +3,7 @@
 #include "rle_test.h"
 #include "save_test.h"
 #include "showtrimmedfromstart_test.h"
+#include "p1_test.h"
 
 int main(int argc, char *argv[])
 {

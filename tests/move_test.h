@@ -15,6 +15,8 @@ TEST(moveTest_positive, _empty) {
     text txt = create_text();
 
     EXPECT_EQ(move(txt, 0, 0), -1);
+    remove_all(txt);
+
 }
 
 TEST(moveTest_positive, _default) {
@@ -28,16 +30,16 @@ TEST(moveTest_positive, _default) {
 
     EXPECT_EQ(move(txt, 1, 2), 1);
 
-    int pos = txt->cursor->pos;
-    EXPECT_EQ(pos, 2);
-
     list<string>::iterator current = txt->lines.begin();
     int lineNumber = 0;
+    int pos = txt->cursor->pos;
 
     while (current++ != txt->cursor->line)
         lineNumber++;
 
+    EXPECT_EQ(pos, 2);
     EXPECT_EQ(lineNumber, 1);
+    remove_all(txt);
 }
 
 TEST(moveTest_negative, _out_of_range) {
@@ -50,6 +52,7 @@ TEST(moveTest_negative, _out_of_range) {
     free(filename);
 
     EXPECT_EQ(move(txt, -10, -10), 0);
+    remove_all(txt);
 }
 
 TEST(moveTest_negative, _invalid) {
@@ -61,7 +64,8 @@ TEST(moveTest_negative, _invalid) {
     load(txt, filename);
     free(filename);
 
-    EXPECT_EQ(move(txt, 'x', 'D'), 0);
+    EXPECT_EQ(move(txt, '?', '-'), 0);
+    remove_all(txt);
 }
 
 #endif // MOVE_TEST_H

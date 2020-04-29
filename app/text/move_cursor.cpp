@@ -11,7 +11,7 @@
 int move_cursor(text txt, int str, int col)
 {
     /* Проверяем, имеется ли текст */
-    if (txt->lines.begin() == txt->lines.end()) {
+    if (txt->lines.size() == 0) {
         fprintf(stderr, "There are already no any lines in the text!\n");
         return -1;
     }
