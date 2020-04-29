@@ -126,7 +126,6 @@ int main()
                 if ((arg = strtok(NULL, "\n")) == NULL) {
                     fprintf(stderr, "Usage: p1 <string>\n");
                 } else {
-                    strcat(arg, "\n");
                     place_first(txt, arg);
                 }
                 continue;

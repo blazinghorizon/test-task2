@@ -36,20 +36,4 @@ TEST(saveTest_positive, _default) {
 
 }
 
-TEST(saveTest_negative, _secured_file) {
-    text txt = create_text();
-    char *filename = (char*) malloc(sizeof(char) * 2048);
-    snprintf(filename, 1024, "%s/move_input.txt",INPUTDIRFILE);
-    load (txt, filename);
-
-    char *locked_file = (char*) malloc(sizeof(char) * 2048);
-    snprintf(locked_file, 1024, "%s/locked.txt",INPUTDIRFILE);
-
-    EXPECT_EQ(save(txt, locked_file), -1);
-
-    remove_all(txt);
-    free(filename);
-    free(locked_file);
-}
-
 #endif // TEST_SAVE_H
