@@ -6,13 +6,15 @@ CONFIG -= qt
 SOURCES += \
     editor.cpp \
     load.cpp \
-    cp.cpp \
     move.cpp \
+    place_first.cpp \
+    pr_righter.cpp \
     rle.cpp \
     save.cpp \
+    show.cpp \
     showtrimmedfromstart.cpp \
+    text/add_begin.cpp \
     text/append_line.cpp \
-    text/cp_swap.cpp \
     text/create_text.cpp \
     text/move_cursor.cpp \
     text/process_forward.cpp \
@@ -21,11 +23,13 @@ SOURCES += \
 
 
 HEADERS += \
-    cp.h \
     load.h \
     move.h \
+    place_first.h \
+    pr_righter.h \
     rle.h \
     save.h \
+    show.h \
     showtrimmedfromstart.h \
     text/text.h \
     text/_text.h

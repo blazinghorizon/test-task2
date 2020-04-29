@@ -43,4 +43,6 @@ void remove_all(text txt);
 /*Перемещение строк*/
 int swap(text txt);
 
+void add_begin(text txt, string contents);
+
 #endif

@@ -15,18 +15,16 @@ int move_cursor(text txt, int str, int col)
         fprintf(stderr, "There are already no any lines in the text!\n");
         return -1;
     }
-   /*Задание значений курсора*/
-   list <string> :: iterator it = txt->lines.begin();
 
    if (str >= 0 && txt->lines.size() >= (size_t)str) {
+       list<string>::iterator it = txt->lines.begin();
        advance(it, str);
+       txt->cursor->line = it;
    } else {
        return 0;
    }
-
-   txt->cursor->line = it;
    
-   if ((*(txt->cursor->line)).size() >= (size_t) col) {
+   if (col > -1 && (*(txt->cursor->line)).size() > (size_t) col) {
        txt->cursor->pos = col;
    } else {
        return 0;

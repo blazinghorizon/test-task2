@@ -1,5 +1,4 @@
 #include <gtest/gtest.h>
-#include "cp_test.h"
 #include "move_test.h"
 #include "rle_test.h"
 #include "save_test.h"

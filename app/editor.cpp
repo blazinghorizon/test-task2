@@ -17,6 +17,8 @@
 #include "save.h"
 #include "load.h"
 #include "rle.h"
+#include "show.h"
+#include "place_first.h"
 
 #define MAXLINE 255
 
@@ -77,6 +79,11 @@ int main()
             continue;
         }
 
+      if (strcmp(cmd, "show") == 0) {
+            show(txt);
+            continue;
+        }
+
 	/*Перемещение курсора*/
           if (strcmp(cmd, "move") == 0) {
 	     col = 0;
@@ -114,11 +121,16 @@ int main()
             continue;
         }
 
-	/*Перемещение строк*/
-	 if (strcmp(cmd, "cp") == 0) {
-            cp(txt);
-            continue;
-        }
+    /* Помещаем строку в начало файла */
+            if (strcmp(cmd, "p1") == 0) {
+                if ((arg = strtok(NULL, "\n")) == NULL) {
+                    fprintf(stderr, "Usage: p1 <string>\n");
+                } else {
+                    strcat(arg, "\n");
+                    place_first(txt, arg);
+                }
+                continue;
+            }
 
         /* Если команда не известна */
         fprintf(stderr, "Unknown command: %s\n", cmd);
