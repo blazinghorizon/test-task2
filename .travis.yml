@@ -2,7 +2,8 @@ language:
   - cpp
 
 before_install:
-  - pip install --upgrade pip --user cpp-coveralls
+  - pip install --upgrade
+  - pip --user cpp-coveralls
 
 script:
   - qmake
