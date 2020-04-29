@@ -17,6 +17,7 @@ void showfromstart(text txt)
 {
     /*Применяем функцию showfromstart_line к каждой строке*/
     process_forward(txt, showfromstart_line, NULL);
+    printf("\n");
 }
 
 static void showfromstart_line(int index, string contents, int cursor, void *data)

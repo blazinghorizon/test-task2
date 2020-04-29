@@ -11,7 +11,10 @@ QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
 
-DEFINES += INPUTDIRFILE=\\\"$$PWD/test_files\\\"
+DEFINES += INPUTDIRFILE_TR=\\\"$$PWD/test_files/trimmed_files\\\"
+DEFINES += INPUTDIRFILE_SP=\\\"$$PWD/test_files/special_files\\\"
+DEFINES += INPUTDIRFILE_MV=\\\"$$PWD/test_files/move_files\\\"
+DEFINES += INPUTDIRFILE_RL=\\\"$$PWD/test_files/rle_files\\\"
 
 HEADERS += \
     move_test.h \

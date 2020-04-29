@@ -11,7 +11,7 @@ extern "C++" {
 #include "text/_text.h"
 }
 
-TEST(moveTest_positive, _empty) {
+TEST(moveTest_positive, empty) {
     text txt = create_text();
 
     EXPECT_EQ(move(txt, 0, 0), -1);
@@ -19,11 +19,11 @@ TEST(moveTest_positive, _empty) {
 
 }
 
-TEST(moveTest_positive, _default) {
+TEST(moveTest_positive, simple) {
     text txt = create_text();
 
     char *filename = (char*) malloc(sizeof(char*) * 1024);
-    snprintf(filename, 1024, "%s/move_input.txt", INPUTDIRFILE);
+    snprintf(filename, 1024, "%s/move_input.txt", INPUTDIRFILE_MV);
 
     load(txt, filename);
     free(filename);
@@ -42,11 +42,11 @@ TEST(moveTest_positive, _default) {
     remove_all(txt);
 }
 
-TEST(moveTest_negative, _out_of_range) {
+TEST(moveTest_negative, out_of_range) {
     text txt = create_text();
 
     char *filename = (char*) malloc(sizeof(char*) * 1024);
-    snprintf(filename, 1024, "%s/move_input.txt", INPUTDIRFILE);
+    snprintf(filename, 1024, "%s/move_input.txt", INPUTDIRFILE_MV);
 
     load(txt, filename);
     free(filename);
@@ -55,11 +55,11 @@ TEST(moveTest_negative, _out_of_range) {
     remove_all(txt);
 }
 
-TEST(moveTest_negative, _invalid) {
+TEST(moveTest_negative, _nvalid) {
     text txt = create_text();
 
     char *filename = (char*) malloc(sizeof(char*) * 1024);
-    snprintf(filename, 1024, "%s/move_input.txt", INPUTDIRFILE);
+    snprintf(filename, 1024, "%s/move_input.txt", INPUTDIRFILE_MV);
 
     load(txt, filename);
     free(filename);

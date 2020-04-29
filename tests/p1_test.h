@@ -10,11 +10,11 @@ extern "C++" {
 #include "load.h"
 }
 
-TEST(p1_Positive, _default) {
+TEST(p1_positive, simple) {
     text txt = create_text();
 
     char *filename = (char*) malloc(sizeof(char*) * 1024);
-    snprintf(filename, 1024, "%s/move_input.txt", INPUTDIRFILE);
+    snprintf(filename, 1024, "%s/move_input.txt", INPUTDIRFILE_MV);
 
     load(txt, filename);
 
@@ -26,11 +26,11 @@ TEST(p1_Positive, _default) {
 }
 
 
-TEST(p1_Negative, _empty_text) {
+TEST(p1_negative, empty_text) {
     text txt = create_text();
 
     char *filename = (char*) malloc(sizeof(char*) * 1024);
-    snprintf(filename, 1024, "%s/empty.txt", INPUTDIRFILE);
+    snprintf(filename, 1024, "%s/empty.txt", INPUTDIRFILE_SP);
 
     load(txt, filename);
 

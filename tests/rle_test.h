@@ -10,11 +10,11 @@ extern "C++" {
 #include "move.h"
 }
 
-TEST(rleTest_positive, _default) {
+TEST(rleTest_positive, simple) {
     text txt = create_text();
 
     char *filename = (char*) malloc(sizeof(char*) * 1024);
-    snprintf(filename, 1024, "%s/rle_input.txt", INPUTDIRFILE);
+    snprintf(filename, 1024, "%s/rle_input.txt", INPUTDIRFILE_RL);
 
     load(txt, filename);
     free(filename);
@@ -24,7 +24,7 @@ TEST(rleTest_positive, _default) {
     remove_all(txt);
 }
 
-TEST(rleTest_negative, _empty) {
+TEST(rleTest_negative, empty) {
     text txt = create_text();
 
     EXPECT_EQ(rle_str(txt), -1);
@@ -32,11 +32,11 @@ TEST(rleTest_negative, _empty) {
     remove_all(txt);
 }
 
-TEST(rleTest_negative, _wrong_crsr_pos) {
+TEST(rleTest_negative, wrong_crsr_pos) {
     text txt = create_text();
 
     char *filename = (char*) malloc(sizeof(char*) * 1024);
-    snprintf(filename, 1024, "%s/rle_input.txt", INPUTDIRFILE);
+    snprintf(filename, 1024, "%s/rle_input.txt", INPUTDIRFILE_RL);
 
     load(txt, filename);
     free(filename);
