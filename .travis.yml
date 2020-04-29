@@ -2,7 +2,7 @@ language:
   - cpp
 
 before_install:
-  - pip install --upgrade pip --user cpp-coveralls
+  - pip install --user cpp-coveralls
 
 script:
   - qmake
@@ -13,9 +13,6 @@ after_success:
   - coveralls --root . -E ".*external.*" -E ".*tests.*"
   - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output
-
-git:
-  depth: false
   
 addons:
   sonarcloud:
