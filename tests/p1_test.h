@@ -21,7 +21,7 @@ TEST(p1_Positive, _default) {
     place_first(txt, "123");
 
     string beginning = (*(txt->lines.begin()));
-    EXPECT_EQ(beginning, "123");
+    EXPECT_EQ(beginning, "123\n");
     remove_all(txt);
 }
 
@@ -37,7 +37,7 @@ TEST(p1_Negative, _empty_text) {
     place_first(txt, "123");
 
     string beginning = (*(txt->lines.begin()));
-    EXPECT_EQ(beginning, "123");
+    EXPECT_EQ(beginning, "123\n");
 
     remove_all(txt);
 }
