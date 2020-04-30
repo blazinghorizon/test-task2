@@ -110,8 +110,10 @@ int main()
 				i = -1;
 		}
             }
-	    if (i < 2) fprintf(stderr, "Usage: move numberline numbercolumn\n"); 
-		else  move(txt ,line ,col);
+        if (i < 2)
+            fprintf(stderr, "Usage: move numberline numbercolumn\n");
+        else
+            move(txt ,line ,col);
             continue;
         }
 

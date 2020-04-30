@@ -8,6 +8,6 @@
 #define UNUSED(x) (void)(x)
 
 /*Сохранение*/
-int save(text txt, char *filename);
+int save(text txt, const char *filename);
 
 #endif // SAVE_H

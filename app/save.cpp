@@ -14,7 +14,7 @@
 static void save_line(int index, string contents, int cursor, void *data);
 
 
-int save(text txt, char *filename)
+int save(text txt, const char *filename)
 {
     FILE *f;
 

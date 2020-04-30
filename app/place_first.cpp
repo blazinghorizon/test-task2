@@ -9,7 +9,7 @@
 #include "place_first.h"
 #include "show.h"
 
-void place_first(text txt, string line)
+void place_first(text txt, const string line)
 {
     add_begin(txt, line);
     show(txt);

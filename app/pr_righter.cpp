@@ -33,6 +33,7 @@ static void print_r(int index, string contents, int cursor, void *data)
     UNUSED(data);
 
     /* Выводим подстроку, которая находится справа от курсора */
-    if (cursor != -1)
+    if (cursor != -1) {
     std::cout << contents.substr(cursor, contents.size() - cursor);
+    }
 }

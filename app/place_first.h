@@ -3,6 +3,6 @@
 
 #include "text/text.h"
 
-void place_first(text txt, string line);
+void place_first(text txt, const string line);
 
 #endif // PLACE_FIRST_H
