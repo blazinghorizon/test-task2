@@ -22,7 +22,7 @@ HEADERS += \
     rle_test.h \
     save_test.h \
     showtrimmedfromstart_test.h \
-
+    
 SOURCES +=  main.cpp \
     ../app/load.cpp \
     ../app/move.cpp \
@@ -39,5 +39,5 @@ SOURCES +=  main.cpp \
     ../app/show.cpp \
     ../app/place_first.cpp \
     ../app/pr_righter.cpp \
-
+    
 INCLUDEPATH += ../app
