@@ -1,5 +1,5 @@
-#ifndef RLE_H
-#define RLE_H
+#ifndef RLE_TEST_H
+#define RLE_TEST_H
 
 #include <gtest/gtest.h>
 #include <gmock/gmock-matchers.h>
@@ -50,4 +50,4 @@ TEST(rleTest_negative, wrong_crsr_pos) {
 
     remove_all(txt);
 }
-#endif // RLE_H
+#endif // RLE_TEST_H
