@@ -19,6 +19,7 @@ TEST(rleTest_positive, simple) {
     load(txt, filename);
     free(filename);
     move(txt, 0, 2);
+    int res = rle_needed(txt);
     EXPECT_EQ(rle_str(txt), 1);
 
     remove_all(txt);
