@@ -1,0 +1,11 @@
+Ошибка №1
+Описание: Ошибка при выполнении теста
+Тест: rle_test.h
+Входные данные: -
+Ожидаемый результат: Числовое возвращаемое значение
+Фактический результат: Отсутствие подключения файла с функцией
+Travis log: rle_test.h: In member function ‘virtual void rleTest_positive_simple_Test::TestBody()’:
+264rle_test.h:25:29: error: ‘rle_needed’ was not declared in this scope
+265     int res = rle_needed(txt);
+Возможная причина: Ошибка подключения
+Статус: Обнаружена
