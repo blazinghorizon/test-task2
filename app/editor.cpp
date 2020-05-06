@@ -119,7 +119,7 @@ int main()
 
 	/*Удаление символов после курсора*/
 	if (strcmp(cmd, "rle") == 0) {
-            rle(txt);
+            rle_lines(txt);
             continue;
         }
 
