@@ -34,8 +34,8 @@ HEADERS += \
     text/text.h \
     text/_text.h
 
-QMAKE_CFLAGS += -Wall -Wextra -Werror
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 
 # gcov
-QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov -lm
