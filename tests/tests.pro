@@ -26,7 +26,7 @@ HEADERS += \
 SOURCES +=  main.cpp \
     ../app/load.cpp \
     ../app/move.cpp \
-    ../app/rle.cpp \
+    ../app/rle_needed.cpp \
     ../app/save.cpp \
     ../app/showtrimmedfromstart.cpp \
     ../app/text/append_line.cpp \
