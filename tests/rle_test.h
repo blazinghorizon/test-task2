@@ -5,7 +5,7 @@
 #include <gmock/gmock-matchers.h>
 
 extern "C++" {
-#include "rle.h"
+#include "rle_neede.h"
 #include "load.h"
 #include "move.h"
 }
