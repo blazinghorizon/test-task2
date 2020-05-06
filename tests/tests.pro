@@ -8,7 +8,7 @@ CONFIG -= qt
 
 QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 
-QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
 
 DEFINES += INPUTDIRFILE_TR=\\\"$$PWD/test_files/trimmed_files\\\"
