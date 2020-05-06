@@ -5,9 +5,12 @@
 #include <gmock/gmock-matchers.h>
 
 extern "C++" {
-#include "rle_needed.h"
 #include "load.h"
 #include "move.h"
+}
+
+extern "C" {
+#include "rle_needed.h"
 }
 
 TEST(rleTest_positive, simple) {
