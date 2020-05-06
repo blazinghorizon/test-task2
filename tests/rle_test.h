@@ -23,15 +23,16 @@ TEST(rleTest_positive, simple) {
     free(filename);
     move(txt, 0, 2);
     int res = rle_needed(txt);
-    EXPECT_EQ(rle_str(txt), 1);
+    EXPECT_EQ(res, 1);
 
     remove_all(txt);
 }
 
 TEST(rleTest_negative, empty) {
     text txt = create_text();
-
-    EXPECT_EQ(rle_str(txt), -1);
+    
+    int res = rle_needed(txt);
+    EXPECT_EQ(res, -1);
 
     remove_all(txt);
 }
@@ -46,7 +47,8 @@ TEST(rleTest_negative, wrong_crsr_pos) {
     free(filename);
 
     move(txt, 1, 15);
-    EXPECT_EQ(rle_str(txt), 0);
+    int res = rle_needed(txt);
+    EXPECT_EQ(res), 0);
 
     remove_all(txt);
 }
