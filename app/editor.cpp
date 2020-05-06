@@ -16,7 +16,7 @@
 #include "move.h"
 #include "save.h"
 #include "load.h"
-#include "rle.h"
+#include "rle_needed.h"
 #include "show.h"
 #include "place_first.h"
 
