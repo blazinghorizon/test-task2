@@ -27,7 +27,7 @@ HEADERS += \
     move.h \
     place_first.h \
     pr_righter.h \
-    rle.h \
+    rle_needed.h \
     save.h \
     show.h \
     showtrimmedfromstart.h \
