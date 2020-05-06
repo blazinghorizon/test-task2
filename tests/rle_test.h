@@ -48,7 +48,7 @@ TEST(rleTest_negative, wrong_crsr_pos) {
 
     move(txt, 1, 15);
     int res = rle_needed(txt);
-    EXPECT_EQ(res), 0);
+    EXPECT_EQ(res, 0);
 
     remove_all(txt);
 }
