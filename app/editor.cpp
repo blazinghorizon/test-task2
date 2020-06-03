@@ -1,7 +1,7 @@
 /**
  * editor.cpp -- строковый текстовый редактор
  *
- * Copyright (c) 2020, Filin Nikolay <nfilin@petrsu.ru>
+ * Copyright (c) 2020, Nikita Semenov <ndsemeno@petrsu.ru>
  *
  * This code is licensed under a MIT-style license.
  */
@@ -16,7 +16,7 @@
 #include "move.h"
 #include "save.h"
 #include "load.h"
-#include "rle_needed.h"
+#include "rle.h"
 #include "show.h"
 #include "place_first.h"
 
@@ -119,7 +119,7 @@ int main()
 
 	/*Удаление символов после курсора*/
 	if (strcmp(cmd, "rle") == 0) {
-            rle_needed(txt);
+            rle(txt);
             continue;
         }
 
