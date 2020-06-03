@@ -9,13 +9,13 @@
 #include <iostream>
 #include <assert.h>
 #include <stdio.h>
-#include "rle_needed.h"
+#include "rle.h"
 #include "text/text.h"
 
 
 static void rle_line(int index, string contents, int cursor, void *data);
 
-int rle_needed(text txt)
+int rle(text txt)
 {
    /* Применяем функцию rle_line к каждой строке текста и удаляем текст после курсора*/
    process_forward(txt, rle_line, NULL);
