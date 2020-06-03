@@ -8,6 +8,6 @@
 #define UNUSED(x) (void)(x)
 
 /*Удаляет символы справа от курсора*/
-int rle_needed(text txt);
+int rle(text txt);
 
 #endif // RLE_H
