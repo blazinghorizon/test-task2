@@ -5,12 +5,9 @@
 #include <gmock/gmock-matchers.h>
 
 extern "C++" {
+#include "rle.h"
 #include "load.h"
 #include "move.h"
-}
-
-extern "C" {
-#include "rle_needed.h"
 }
 
 TEST(rleTest_positive, simple) {
@@ -22,17 +19,15 @@ TEST(rleTest_positive, simple) {
     load(txt, filename);
     free(filename);
     move(txt, 0, 2);
-    int res = rle_needed(txt);
-    EXPECT_EQ(res, 1);
+    EXPECT_EQ(rle(txt), 1);
 
     remove_all(txt);
 }
 
 TEST(rleTest_negative, empty) {
     text txt = create_text();
-    
-    int res = rle_needed(txt);
-    EXPECT_EQ(res, -1);
+
+    EXPECT_EQ(rle(txt), -1);
 
     remove_all(txt);
 }
@@ -46,9 +41,8 @@ TEST(rleTest_negative, wrong_crsr_pos) {
     load(txt, filename);
     free(filename);
 
-    move(txt, 1, 15);
-    int res = rle_needed(txt);
-    EXPECT_EQ(res, 0);
+    move(txt, 2, 15);
+    EXPECT_EQ(rle(txt), 0);
 
     remove_all(txt);
 }
